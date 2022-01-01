@@ -2,9 +2,9 @@
 [![Build Status](https://travis-ci.org/go-ego/cedar.svg)](https://travis-ci.org/go-ego/cedar)
 [![CircleCI Status](https://circleci.com/gh/go-ego/cedar.svg?style=shield)](https://circleci.com/gh/go-ego/cedar)
 [![codecov](https://codecov.io/gh/go-ego/cedar/branch/master/graph/badge.svg)](https://codecov.io/gh/go-ego/cedar)
-[![Go Report Card](https://goreportcard.com/badge/github.com/go-ego/cedar)](https://goreportcard.com/report/github.com/go-ego/cedar)
-[![GoDoc](https://godoc.org/github.com/go-ego/cedar?status.svg)](https://godoc.org/github.com/go-ego/cedar)
-[![Release](https://github-release-version.herokuapp.com/github/go-ego/cedar/release.svg?style=flat)](https://github.com/go-ego/cedar/releases/latest)
+[![Go Report Card](https://goreportcard.com/badge/github.com/vuuihc/cedar)](https://goreportcard.com/report/github.com/vuuihc/cedar)
+[![GoDoc](https://godoc.org/github.com/vuuihc/cedar?status.svg)](https://godoc.org/github.com/vuuihc/cedar)
+[![Release](https://github-release-version.herokuapp.com/github/go-ego/cedar/release.svg?style=flat)](https://github.com/vuuihc/cedar/releases/latest)
 [![Join the chat at https://gitter.im/go-ego/ego](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/go-ego/ego?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Package `cedar` implementes double-array trie, base on [cedar-go](https://github.com/adamzy/cedar-go).
@@ -14,7 +14,7 @@ This package is not thread safe if there is one goroutine doing insertions or de
 
 ## Install
 ```
-go get github.com/go-ego/cedar
+go get github.com/vuuihc/cedar
 ```
 
 ## Usage
@@ -24,7 +24,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/go-ego/cedar"
+	"github.com/vuuihc/cedar"
 )
 
 func main() {

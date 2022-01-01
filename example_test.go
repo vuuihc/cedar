@@ -3,7 +3,7 @@ package cedar_test
 import (
 	"fmt"
 
-	"github.com/go-ego/cedar"
+	"github.com/vuuihc/cedar"
 )
 
 var trie *cedar.Cedar

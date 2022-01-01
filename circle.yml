@@ -4,7 +4,7 @@ jobs:
   build:
     docker:
       - image: golang:1.16.7
-    working_directory: /gopath/src/github.com/go-ego/cedar
+    working_directory: /gopath/src/github.com/vuuihc/cedar
     steps:
       - checkout
       # - run:
