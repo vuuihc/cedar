@@ -7,6 +7,8 @@ import (
 
 	"encoding/gob"
 	"encoding/json"
+
+	"github.com/johnsiilver/golib/mmap"
 )
 
 // Save saves the cedar to an io.Writer,
@@ -65,4 +67,19 @@ func (da *Cedar) LoadFromFile(fileName, dataType string) error {
 	in := bufio.NewReader(file)
 
 	return da.Load(in, dataType)
+}
+
+func (da *Cedar) LoadFromFileWithMMap(fileName, dataType string) error {
+	file, err := os.OpenFile(fileName, os.O_RDONLY, 0600)
+	if err != nil {
+		return err
+	}
+	defer file.Close()
+
+	mf, err := mmap.NewMap(file, mmap.Prot(mmap.Read), mmap.Prot(mmap.Write))
+	if err != nil {
+		return err
+	}
+
+	return da.Load(mf, dataType)
 }
