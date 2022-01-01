@@ -76,7 +76,7 @@ func (da *Cedar) LoadFromFileWithMMap(fileName, dataType string) error {
 	}
 	defer file.Close()
 
-	mf, err := mmap.NewMap(file, mmap.Prot(mmap.Read), mmap.Prot(mmap.Write))
+	mf, err := mmap.NewMap(file, mmap.Prot(mmap.Read), mmap.Prot(mmap.Write), mmap.Flag(mmap.Shared))
 	if err != nil {
 		return err
 	}
